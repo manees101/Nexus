@@ -8,7 +8,7 @@ app.get("/",(req,res)=>{
   res.send("Hellow from server")
 })
 
-app.register(cors, { origin: process.env.CLIENT_URL });
+app.register(cors, { origin:"https://nexuschat.netlify.app" });
 app.register(userRoutes);
 app.listen({ port: parseInt(process.env.PORT!) }, () =>
   console.log("server listening on port ", process.env.PORT)
